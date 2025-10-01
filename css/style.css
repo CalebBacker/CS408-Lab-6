@@ -1,29 +1,173 @@
-h1{
-  border-color: #d3e644;
-  border-style: dashed;
+* {
+  box-sizing: border-box;
+  object-fit: cover;
 }
 
-table {
-  border-collapse: collapse;
+html {
+  font-family: serif;
+}
+
+body {
+  margin: 0;
+  background:  url('/Users/calebbacker/cs408lab6/CS408-Lab-6/img/top-image.png') no-repeat top center white;
+
+
+  background-image:
+          linear-gradient(to bottom, rgba(0,0,0,0.2), transparent 15%, transparent 85%, rgba(0,0,0,0.2)),
+          url('/Users/calebbacker/cs408lab6/CS408-Lab-6/img/top-image.png'),
+          url('/Users/calebbacker/cs408lab6/CS408-Lab-6/img/bottom-image.png');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top center, top center, bottom center;
+  background-size: auto, cover, cover;
+
+  border-top: 1mm solid red;
+  border-bottom: 1mm solid red;
+}
+
+article {
+  width: 210mm;
+  height: 297mm;
+  margin: 20px auto;
+  position: relative;
+
+
+}
+
+address {
+  position: absolute;
+  bottom: 8mm;
+  right: 20mm;
+}
+
+h1 {
+  font-style: italic  ;
+  position: static;
+  margin: 40px auto 10px;
+  width: auto;
+  height: auto;
+  font-size: 36px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: black;
+  text-shadow: none;
+  column-span: all;           /* span across both columns */
+}
+
+/* Your CSS below here */
+h2{
+    font-style: italic;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    break-inside: avoid;
+}
+
+img{
+  width: 100%
+}
+
+.logo {
+  position: absolute;
+  top: 20mm;
+  left: 20mm;
+  width: 128px;
+  height: 128px;
+}
+
+.logo img{
   width: 100%;
-  margin-bottom: 20px;
+  height: auto;
+  display: block;
+
 }
 
-th, td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background-color: #f2f2f2;
+.logo span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  line-height: 1.2;
+  color: white;
+  text-align: center;
   font-weight: bold;
+  text-shadow: 1px 1px 2px black;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+/* Main text area */
+/* Main content area */
+.quote::after {
+  content: "";
+  display: block;
+  column-span: all;
+  border-top: 2px solid #999;
+  margin: 20px 0 30px;
+}
+main {
+  padding: 70mm 25mm 50mm;
+  font-size: 14px;
+  color: #222;
+
+  /* Enable two columns */
+  column-count: 2;
+  column-gap: 30px;
 }
 
-tbody tr:hover {
-  background-color: #e9e9e9;
+
+main h1,
+main .quote {
+  column-span: all;
+  text-align: center;
 }
+
+main h1 {
+  font-family: serif;
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+main .quote {
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+
+main h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  break-inside: avoid;
+}
+
+
+main p {
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  gap: 8px; /* space between each item */
+  margin-top: 20px;
+}
+
+form input[type="number"] {
+  width: 50px;
+  margin: 0 5px;
+}
+
+form button {
+  margin-left: 10px;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+/*form label,*/
+/*form input,*/
+/*form button {*/
+/*  display: block; !* ensures each element takes its own line *!*/
+/*}*/
