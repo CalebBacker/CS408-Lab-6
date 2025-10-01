@@ -9,13 +9,9 @@ html {
 
 body {
   margin: 0;
-  background:  url('/Users/calebbacker/cs408lab6/CS408-Lab-6/img/top-image.png') no-repeat top center white;
+  background:  url('../img/top-image.png') no-repeat top center white;
 
 
-  background-image:
-          linear-gradient(to bottom, rgba(0,0,0,0.2), transparent 15%, transparent 85%, rgba(0,0,0,0.2)),
-          url('/Users/calebbacker/cs408lab6/CS408-Lab-6/img/top-image.png'),
-          url('/Users/calebbacker/cs408lab6/CS408-Lab-6/img/bottom-image.png');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: top center, top center, bottom center;
   background-size: auto, cover, cover;
